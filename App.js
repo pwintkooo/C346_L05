@@ -86,14 +86,20 @@ const renderSection = ({section}) => {
     )
 };
 
+const HandleButton = () => {
+    return(
+        <Button title='ADD POKEMON'/>
+    )
+}
+
 function App() {
   return(
       <View style={styles.container}>
-          <Button title='ADD POKEMON'/>
         <SectionList
             sections={dataSource}
             renderItem={renderItem}
             renderSectionHeader={renderSection}
+            ListHeaderComponent={<HandleButton/>}
         />
       </View>
   );
